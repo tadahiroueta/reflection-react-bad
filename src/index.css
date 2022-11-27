@@ -1,13 +1,224 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* latin-ext */
+@font-face {
+    font-family: 'Karla';
+    font-style: light;
+    font-weight: 200;
+    src: url(https://fonts.gstatic.com/s/karla/v21/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaHUlKd7c.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* latin */
+@font-face {
+    font-family: 'Karla';
+    font-style: light;
+    font-weight: 200;
+    src: url(https://fonts.gstatic.com/s/karla/v21/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lK.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------------- Global ---------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Karla";
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.blurred {
+    opacity: 0.5;
+}
+
+
+/* ---------------- Header ---------------- */
+
+
+header {
+    height: 10vh;
+    display: flex;
+    border-bottom: 1px solid white;
+}
+
+.left-header {
+    margin: 0 10%;
+    width: 50%;
+    display: flex;
+}
+
+.logo-link {
+    margin: 0 10% 0 5%;
+}
+
+.logo {
+    height: 100%;
+}
+
+.navigation {
+    margin: 3% 0 0 0;
+    display: flex;
+    width: 50%;
+}
+
+.navigation-link {
+    float: left;
+    margin: 0 10% 0 0;
+    font-size: 1.5rem;
+}
+
+.right-header {
+    margin: 0 10% 0 10%;
+    width: 10%;
+}
+
+.icon {
+    margin: 0 5%;
+    width: 40%;
+    height: 100%;
+    background-color: black;
+}
+
+.icon-image {
+    height: 50%;
+}
+
+
+/* ---------------- Browser ---------------- */
+
+
+.thumbnail-row {
+    margin: 5vh 2.5%;
+}
+
+.thumbnail-treadmill {
+    height: 17vh;
+}
+
+.thumbnail {
+    margin: 0 1% 0 0;
+    height: 100%;
+}
+
+
+/* ---------------- Preview ---------------- */
+
+
+.preview {
+    z-index: 2;
+    position: fixed;
+    margin: 0 10%;
+    border: 1px solid white;
+    border-radius: 50px;
+    height: 80vh;
+    width: 80%;
+    background-color: black;
+    opacity: 1;
+    display: flex;
+    transform: translate(0, -10%);
+}
+
+.preview-left {
+    width: 45%;
+    height: 100%;
+    border-right: 1px solid white;
+}
+
+.x-icon {
+    margin: 0 0 0 2%;
+    width: 3rem;
+    transform: translate(0, -380%);
+}
+
+.preview-thumbnail {
+    transform: translate(0, 30%);
+    width: 80%;
+}
+
+.play-icon {
+    margin: 25% 42.5%;
+    width: 15%;
+}
+
+.preview-right {
+    margin: 3% 3%;
+    width: 49%;
+    display: block;
+}
+
+.preview-header {
+    display: inline-block;
+}
+
+.preview-title {
+    float: left;
+    margin: 0;
+    font-size: 2.8rem;
+}
+
+.preview-content-rating {
+    float: left;
+    margin: 0.2rem 0 0 3rem;
+    border: 1px solid white;
+    padding: 0.2rem;
+}
+
+.preview-body {
+    margin: 8% 0 0 0;
+    height: 80%;
+}
+
+.preview-column {
+    float: left;
+    height: 100%;
+    width: 65%;
+}
+
+.preview-description {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.preview-buttons {
+    position: absolute;
+    bottom: 10%;
+}
+
+.preview-button {
+    border: 1px solid white;
+    padding: 0.2rem;
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+.preview-staff {
+    float: left;
+    width: 28%;
+}
+
+.preview-staff-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.preview-staff-list {
+    margin: 0.5rem 0 0 0;
+}
+
+.preview-staff-member {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: normal;
 }
